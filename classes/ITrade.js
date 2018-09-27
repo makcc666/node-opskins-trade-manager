@@ -149,7 +149,7 @@ class ITrade {
     }
     if (!params.uid) throw new Missing('uid')
     if (!params.token) throw new Missing('token')
-    if (!params.items && !params.items_to_receive && !params.items_to_receive) throw new Missing('items')
+    if (!params.items && !params.items_to_receive && !params.items_to_send) throw new Missing('items')
 
     let { uid, token, items, twofactor_code, message = '' } = params
 
@@ -170,7 +170,7 @@ class ITrade {
 
   async SendOfferToSteamId(params = {}) {
     if (!params.steam_id) throw new Missing('steam_id')
-    if (!params.items && !params.items_to_receive && !params.items_to_receive) throw new Missing('items')
+    if (!params.items && !params.items_to_receive && !params.items_to_send) throw new Missing('items')
 
     let { steam_id, items, twofactor_code, message = '' } = params
 
